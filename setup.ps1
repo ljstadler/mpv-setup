@@ -8,7 +8,7 @@ if (-Not (Test-Path "$HOME\AppData\Roaming\mpv")) {
 
 Invoke-WebRequest "https://nightly.link/mpv-player/mpv/workflows/build/master/mpv-x86_64-pc-windows-msvc.zip" -OutFile "$HOME\Downloads\mpv.zip"
 
-Expand-Archive -Path "$HOME\Downloads\mpv.zip" -DestinationPath "$HOME\AppData\Local\mpv"
+Expand-Archive -Force -Path "$HOME\Downloads\mpv.zip" -DestinationPath "$HOME\AppData\Local\mpv"
 
 Remove-Item "$HOME\Downloads\mpv.zip"
 
